@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="salarioVendas"/>
+        <attribute name="authors" value="bruno.sabbato"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-08 04:43:41 "/>
+        <attribute name="created" value="YnJ1bm8uc2FiYmF0bztTQU4wNzE3NDU5VzExLTE7MjAyNS0wNS0wODsiMDQ6MTc6MzAgIjszMzk0"/>
+        <attribute name="edited" value="YnJ1bm8uc2FiYmF0bztTQU4wNzE3NDU5VzExLTE7MjAyNS0wNS0wODsiMDQ6NDM6NDEgIjsyOzM1MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="vendedor" type="String" array="False" size=""/>
+            <declare name="salarioBase, valorVendas, salarioFinal" type="Real" array="False" size=""/>
+            <output expression="&quot;Nome do vendedor:&quot;" newline="True"/>
+            <input variable="vendedor"/>
+            <output expression="&quot;Qual o sal&#225;rio base do vendedor?&quot;" newline="True"/>
+            <input variable="salarioBase"/>
+            <output expression="&quot;Quanto o funcion&#225;rio vendeu no m&#234;s?&quot;" newline="True"/>
+            <input variable="valorVendas"/>
+            <if expression="valorVendas &gt;= 5000">
+                <then>
+                    <assign variable="salarioFinal" expression="salarioBase + (valorVendas * 0.15)"/>
+                    <output expression="&quot;O sal&#225;rio final do funcion&#225;rio(a) &amp; (vendedor) &#233; (salarioFinal)&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="valorVendas &gt;= 1500">
+                        <then>
+                            <assign variable="salarioFinal" expression="salarioBase + (valorVendas * 0.10)"/>
+                            <output expression="&quot;O sal&#225;rio final do funcion&#225;rio(a) &amp; (vendedor) &#233; (salarioFinal)&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="salarioFinal" expression="salarioBase + (valorVendas * 0.05)"/>
+                            <output expression="&quot;O sal&#225;rio final do funcion&#225;rio(a) &amp; (vendedor) &#233; (salarioFinal)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
