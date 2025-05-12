@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="conversor_temperatura_loop"/>
+        <attribute name="authors" value="bruno.sabbato"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-12 04:53:54 "/>
+        <attribute name="created" value="YnJ1bm8uc2FiYmF0bztTQU4wNzE3NDU5VzExLTE7MjAyNS0wNS0xMjsiMDQ6MjU6NDAgIjszMzg5"/>
+        <attribute name="edited" value="YnJ1bm8uc2FiYmF0bztTQU4wNzE3NDU5VzExLTE7MjAyNS0wNS0xMjsiMDQ6NTM6NTQgIjsxOzM1MDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <declare name="celsius, fahrenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;Voc&#234; deseja converter: 1 - Celsius para Fahrenheit // 2 - Fahrenheit para Celsius // 3 - Sair&quot;" newline="True"/>
+            <input variable="opcao"/>
+            <while expression="opcao=1 || opcao=2 || opcao=3">
+                <if expression="opcao = 1">
+                    <then>
+                        <output expression="&quot;Digite a temperatura em Celsius &#176;C&quot;" newline="True"/>
+                        <input variable="celsius"/>
+                        <assign variable="fahrenheit" expression="(celsius * 9/5) + 32"/>
+                        <output expression="&quot;o resultado da convers&#227;o &#233; &quot; &amp; fahrenheit &amp; &quot; &#176;F&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="opcao = 2">
+                            <then>
+                                <output expression="&quot;Digite a temperatura em Fahrenheit &#176;F&quot;" newline="True"/>
+                                <input variable="fahrenheit"/>
+                                <assign variable="celsius" expression="(fahrenheit - 32) * 5/9"/>
+                                <output expression="&quot;o resultado da convers&#227;o &#233; &quot; &amp; celsius &amp; &quot; &#176;C&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="opcao = 3">
+                                    <then>
+                                        <output expression="&quot;Obrigado, at&#233; logo!&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Op&#231;&#227;o Inv&#225;lida&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot;Voc&#234; deseja converter: 1 - Celsius para Fahrenheit // 2 - Fahrenheit para Celsius // 3 - Sair&quot;" newline="True"/>
+                <input variable="opcao"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
