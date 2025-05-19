@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./scriptDesafio.js"></script>
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script/scriptDom.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Media - Juquinha</title>
 </head>
+
 <body>
-    
+    <form action="#" id="form">
+        <input type="text" name="nome" id="nome" placeholder="Digite o nome do aluno"
+            class="form__element form__textbox" />
+        <div class="form__element">
+            <label for="nota1">Primeira Nota</label>
+            <input type="number" class="form__textbox" name="nota1" id="nota1" min="0" max="10" />
+        </div>
+        <div class="form__element">
+            <label for="nota2">Segunda Nota</label>
+            <input type="number" class="form__textbox" name="nota2" id="nota2" min="0" max="10" />
+        </div>
+        <div class="form__element">
+            <label for="nota3">Terceira Nota</label>
+            <input type="number" class="form__textbox" name="nota3" id="nota3" min="0" max="10" />
+        </div>
+        <div class="form__element">
+            <label for="nota4">Quarta Nota</label>
+            <input type="number" class="form__textbox" name="nota4" id="nota4" min="0" max="10" />
+        </div>
+        <input class="form__element form__btn" onclick="calcularMedia()" type="button" id="button"
+            value="Calcular Media" />
+        <div id="result-box">
+            <p class="result-box__text">Aluno:</p>
+            <input type="text" name="resultado" class="form__textbox" placeholder="Media" id="mediaAluno">
+            <input type="text" name="media" class="form__textbox" placeholder="Resultado" id="resultado">
+        </div>
+    </form>
 </body>
+
 </html>
