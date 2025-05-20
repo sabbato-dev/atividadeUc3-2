@@ -30,14 +30,15 @@
             <label for="nota4">Quarta Nota</label>
             <input type="number" class="form__textbox" name="nota4" id="nota4" min="0" max="10" />
         </div>
-        <input class="form__element form__btn" onclick="calcularMedia()" type="button" id="button"
+        <input class="form__element form__btn" onclick="executarTestes()" type="button" id="button"
             value="Calcular Media" />
         <div id="result-box">
-            <p class="result-box__text">Aluno:</p>
+            <p class="result-box__text">Resultado do Aluno:</p>
             <input type="text" name="resultado" class="form__textbox" placeholder="Media" id="mediaAluno">
             <input type="text" name="media" class="form__textbox" placeholder="Resultado" id="resultado">
         </div>
     </form>
+    <ul id="list"></ul>
 </body>
 
 </html>
